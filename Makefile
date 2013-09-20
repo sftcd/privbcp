@@ -4,10 +4,10 @@ XML2RFC=xml2rfc
 all: core html
 
 core:
-	$(XML2RFC) draft-cooper-ietf-privacy-requirements-00.xml draft-cooper-ietf-privacy-requirements-00.txt
+	$(XML2RFC) draft-cooper-ietf-privacy-requirements-01.xml draft-cooper-ietf-privacy-requirements-01.txt
 
 html:
-	$(XML2RFC) draft-cooper-ietf-privacy-requirements-00.xml draft-cooper-ietf-privacy-requirements-00.html
+	$(XML2RFC) draft-cooper-ietf-privacy-requirements-01.xml draft-cooper-ietf-privacy-requirements-01.html
 
 clean:
-	rm -f draft-cooper-ietf-privacy-requirements-00.txt draft-cooper-ietf-privacy-requirements-00.html
+	rm -f draft-cooper-ietf-privacy-requirements-01.txt draft-cooper-ietf-privacy-requirements-01.html
