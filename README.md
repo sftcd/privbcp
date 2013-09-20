@@ -1,2 +1,3 @@
+# Prupose
 
-This is where we're working on this text
+The draft's purpose is to set a Best Current Practice (BCP) about privacy in protocol design.
