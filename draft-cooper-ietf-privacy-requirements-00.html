@@ -247,6 +247,11 @@ Terminology</h3>
 in this document are to be interpreted as described in <a class='info' href='#RFC2119'>[RFC2119]<span> (</span><span class='info'>Bradner, S., &ldquo;Key words for use in RFCs to Indicate Requirement Levels,&rdquo; March&nbsp;1997.</span><span>)</span></a>.  These words take their normative meanings only when they are presented in
 ALL UPPERCASE.
 </p>
+<p>Encryption cannot provide privacy but can provide confidentiality
+and protocols that support confidentiality can usefully use that in
+order to provide better privacy. So it is important that encryption is
+seen as a useful mechanism and not as "providing privacy."
+</p>
 <p>"Opportunistic encryption" is defined as encryption
    without any pre-arrangement specific to the pair of systems involved (see <a class='info' href='#RFC4322'>[RFC4322]<span> (</span><span class='info'>Richardson, M. and D. Redelmeier, &ldquo;Opportunistic Encryption using the Internet Key Exchange (IKE),&rdquo; December&nbsp;2005.</span><span>)</span></a>).
 </p>
@@ -270,9 +275,11 @@ personal data:
 </p>
 <p></p>
 <ol class="text">
-<li>MUST minimize their use of such information and where that information is sent,
+<li>MUST minimize their use of such information
 </li>
-<li>MUST have well-defined and interoperable ways to send such data encrypted
+<li>
+where personal  information is sent,
+MUST have well-defined and interoperable ways to send such data encrypted
 for the intended recipient(s).
 </li>
 </ol>
@@ -281,10 +288,6 @@ for the intended recipient(s).
 be well-defined for almost all new IETF standards track protocols.
 In most cases it will be better to (also) specify how to do
 mutually authenticated encryption. 
-</p>
-<p>In all cases, IETF protocols MUST
-minimise the amount of personal data
-sent.
 </p>
 <p>Note that this is contingent on practicality - if
 some personal data really has to be
