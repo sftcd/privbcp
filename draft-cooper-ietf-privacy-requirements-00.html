@@ -154,7 +154,7 @@
 <h3>Abstract</h3>
 
 <p>It is the consensus of the IETF that IETF protocols be designed to avoid
-egregious privacy violations to the extent possible. This document establishes
+privacy violations to the extent possible. This document establishes
 a number of protocol design choices as Best Current Practices for the purpose
 of avoiding such violations.
 </p>
@@ -199,7 +199,7 @@ Terminology<br />
 <a href="#core">3.</a>&nbsp;
 Recommendations<br />
 <a href="#eg">4.</a>&nbsp;
-Examples<br />
+Examples and Explanation<br />
 <a href="#SecurityConsiderations">5.</a>&nbsp;
 Security Considerations<br />
 <a href="#iana">6.</a>&nbsp;
@@ -235,6 +235,13 @@ security by articulating Best Current Practices for avoiding egregious privacy
 violations and establishing support for privacy as a principle of IETF protocol
 design.
 </p>
+<p>
+
+   These principles should be applied when designing new protocols,
+   and where applicable, should be considered for updates of existing
+   protocols.
+
+</p>
 <p>Discussion of this draft is directed to the ietf-privacy@ietf.org list.
 </p>
 <a name="anchor1"></a><br /><hr />
@@ -262,12 +269,14 @@ seen as a useful mechanism and not as "providing privacy."
 <a name="rfc.section.3"></a><h3>3.&nbsp;
 Recommendations</h3>
 
-<p>IETF protocols that allow
-personal data to be stored by hosts
-risk assisting in the build up of large databases of
-information that by themselves or in conjunction with
-other databases, can identify people and their actions in
-invasive ways.
+<p>
+There are inherent privacy risks with protocols that allow the communicating
+parties to store personal data, transport personal data, or are vulnerable to
+other parties seeing the personal data in the exchanged communications. Most
+Internet communications involve such risks, and this can allow entities to build large
+databases of information that by themselves or in conjunction with other
+databases, can identify people and their actions in invasive ways.  
+
 </p>
 <p>Therefore, to the extent consistent with basic protocol operation and
 management, standards-track IETF protocols that involve transmission of
@@ -284,10 +293,16 @@ for the intended recipient(s).
 </li>
 </ol>
 
-<p>As a consequence, at minimum, opportunistic encryption needs to
-be well-defined for almost all new IETF standards track protocols.
-In most cases it will be better to (also) specify how to do
-mutually authenticated encryption. 
+<p>
+
+While existing principles call for strong security, it is important to note
+that strong security only in cases where the other party can be authenticated
+does not by itself solve all privacy problems. To guard against dangers of
+large-scale privacy attacks, some protection is needed also for other
+situations.  As a consequence, at minimum, opportunistic encryption needs to be
+well-defined for almost all new IETF standards track protocols.  In most cases
+it will be better to (also) specify how to do mutually authenticated
+encryption. 
 </p>
 <p>Note that this is contingent on practicality - if
 some personal data really has to be
@@ -304,9 +319,43 @@ above MUST include (or reference) an explanation of why they do not conform to t
 <a name="eg"></a><br /><hr />
 <table summary="layout" cellpadding="0" cellspacing="2" class="TOCbug" align="right"><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></table>
 <a name="rfc.section.4"></a><h3>4.&nbsp;
-Examples</h3>
+Examples and Explanation</h3>
 
-<p>[[Add clarifying examples here as discussion evolves]]
+<p>This section has some examples and explanatory material. [[More 
+will be added as discussion evolves.]]
+
+</p>
+<p>
+DHCP is an example of a protocol where it seems quite hard to
+provide useful confidentiality. Should a new DHCP option be
+defined that carries personal data, then the IETF would have 
+to decide if the benefit of that outweighs the potential
+privacy cost.
+
+</p>
+<p>
+For some protocols, layering on top of a security protocol
+like TLS, SSH or IPsec can be a useful way to provide
+confidentiality. However, just because it could be possible
+to do that does not mean that that is sufficient to claim
+conformance with this BCP. For example, claiming that
+Diameter conformed to this BCP becuase one could in
+principle run Diameter over IPsec would not be credible,
+as it seems that such deployments are rare to non-existent.
+Just as practicality is important when claiming that
+sending personal data is unavoidable, it is just as
+important when claiming that layering on top of a 
+security protocol can meet the requirements of this
+BCP.
+
+</p>
+<p>
+
+Since the goal here is to have a BCP that covers all IETF standards track
+protocols we  clearly cannot address all aspects of privacy, for example user
+consent. 
+
+
 </p>
 <a name="SecurityConsiderations"></a><br /><hr />
 <table summary="layout" cellpadding="0" cellspacing="2" class="TOCbug" align="right"><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></table>
@@ -331,7 +380,21 @@ This document does not require actions by IANA.
 <a name="rfc.section.7"></a><h3>7.&nbsp;
 Acknowledgements</h3>
 
-<p>TBD
+<p>Thanks to the following folks for useful comments. These folks
+	may or may not agree with the content.
+
+	
+</p>
+<p>
+ 
+	Jari Arkko,
+	Bernard Aboba,
+	Benoit Claise
+	Nick Doty,
+	Spencer Dawkins,
+	Eliot Lear,
+	Ted Lemon,
+	
 </p>
 <a name="rfc.references1"></a><br /><hr />
 <table summary="layout" cellpadding="0" cellspacing="2" class="TOCbug" align="right"><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></table>
