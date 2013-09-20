@@ -20,6 +20,8 @@
 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3552.xml'>
 <!ENTITY RFC4322 PUBLIC ''
 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4322.xml'>
+<!ENTITY RFC4941 PUBLIC ''
+'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4941.xml'>
 <!ENTITY RFC6973 PUBLIC ''
 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6973.xml'>
 ]>
@@ -132,15 +134,10 @@ in this document are to be interpreted as described in <xref target="RFC2119"
 />.  These words take their normative meanings only when they are presented in
 ALL UPPERCASE.</t>
 
-<t>Encryption cannot provide privacy but can provide confidentiality
-and protocols that support confidentiality can use this property to provide better
-privacy; therefore, it is important that encryption is
-used.</t> 
-
 <t>"Opportunistic encryption" is defined as encryption without any pre-arrangement
 specific to the pair of systems involved (see <xref target="RFC4322" />).</t>
 
-<t>Privacy-specific terminology is provided in <xref target="RFC6973" />. Of particular relevance to this document is the term "personal data," defined as "any information relating to an individual who can be identified, directly or indirectly."</t>
+<t>Privacy-specific terminology is provided in <xref target="RFC6973" />. Of particular relevance to this document is the term "personal data," defined as "any information relating to an individual who can be identified, directly or indirectly." Identifiers such as IP addresses that can remain consistent over time or that particular parties associate with directly identifiable information (such as a real name or street address) are therefore considered to be personal data.</t>
 
 
 </section>
@@ -151,10 +148,10 @@ specific to the pair of systems involved (see <xref target="RFC4322" />).</t>
 <t>
 There are inherent privacy risks with protocols that allow the communicating
 parties to store personal data, transport personal data, or are vulnerable to
-other parties seeing the personal data in the exchanged communications. Most
-Internet communications involve such risks, and this can allow entities to build large
+other parties observing the personal data in the exchanged communications. Most
+Internet communications involve such risks, which can allow entities to build large
 databases of information that by themselves or in conjunction with other
-databases, can identify people and their actions in invasive ways.  
+databases can identify people and their actions in invasive ways.  
 </t>
 
 <t>Therefore, to the extent consistent with basic protocol operation and
@@ -181,7 +178,7 @@ large-scale privacy attacks, some protection is needed also for other
 situations.  As a consequence, at minimum, opportunistic encryption needs to be
 well-defined for almost all new IETF standards track protocols.  In most cases
 it will be better to (also) specify how to do mutually authenticated
-encryption. </t>
+encryption. Encryption provides one aspect of privacy protection, namely confidentiality.</t>
 
 <t>Note that this is contingent on practicality - if
 some personal data really has to be
@@ -235,11 +232,20 @@ security protocol can meet the requirements of this
 BCP.
 </t>
 
+<t>For some protocols, minimizing the use of personal data involves limiting the lifetime of identifiers. In cases where an identifier
+   refers to an individual (or a proxy for an individual, such as a host
+   device or software instance), the longer that identifier persists and
+   the more contexts in which it is used, the more it can facilitate
+   correlation and tracking of information related to the individual and
+   his or her activities.  Creating identifiers that have limited lifetimes by default reduces the possibility that multiple protocol
+   interactions or communications can be correlated back to the same
+   individual. <xref target="RFC4941" /> provides an example in the case of stateless autoconfiguration of IPv6 interface identifiers.</t>
+
 <t>
 
 Since the goal here is to have a BCP that covers all IETF standards track
 protocols we  clearly cannot address all aspects of privacy, for example user
-consent, since that would only be relevant for a small proportion
+participation, since that would only be relevant for a small proportion
 of IETF protocols. 
 
 </t>
@@ -261,7 +267,7 @@ here for being liberal in what you accept.
     <section anchor="SecurityConsiderations" title="Security Considerations">
 
 <t>This document articulates a set of Best Current Practices for privacy that
-extend the IETF's existing security principles. [Fill in some text about
+extend the IETF's existing security principles. [To do: Fill in some text about
 potential tension between privacy and security, e.g., with non-persistent
 identifiers, etc.]</t>
 
@@ -304,6 +310,7 @@ This document does not require actions by IANA. </t>
 		&RFC3365;
 		&RFC3552;
 		&RFC4322;
+		&RFC4941;
 		&RFC6973;
 	</references>
 </back>
