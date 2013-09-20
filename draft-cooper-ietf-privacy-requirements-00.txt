@@ -261,12 +261,12 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    consistent with this BCP.  The IETF will have to decide in such cases
    whether standardising that protocol benefits the Internet or not.
 
+   Many IETF protocols allow for some data items to be optionally or
+   conditionally sent.  If personal data can be sent, then the
+   conditions above apply.
+
    Specifications that do not meet the criteria above MUST include (or
    reference) an explanation of why they do not conform to this BCP.
-
-
-
-
 
 
 
