@@ -133,12 +133,12 @@ in this document are to be interpreted as described in <xref target="RFC2119"
 ALL UPPERCASE.</t>
 
 <t>Encryption cannot provide privacy but can provide confidentiality
-and protocols that support confidentiality can usefully use that in
-order to provide better privacy. So it is important that encryption is
-seen as a useful mechanism and not as "providing privacy."</t> 
+and protocols that support confidentiality can use this property to provide better
+privacy; therefore, it is important that encryption is
+used.</t> 
 
-<t>"Opportunistic encryption" is defined as encryption
-   without any pre-arrangement specific to the pair of systems involved (see <xref target="RFC4322" />).</t>
+<t>"Opportunistic encryption" is defined as encryption without any pre-arrangement
+specific to the pair of systems involved (see <xref target="RFC4322" />).</t>
 
 <t>Privacy-specific terminology is provided in <xref target="RFC6973" />. Of particular relevance to this document is the term "personal data," defined as "any information relating to an individual who can be identified, directly or indirectly."</t>
 
