@@ -277,7 +277,7 @@ This document does not require actions by IANA. </t>
     <!-- ====================================================================== -->
 
     <section title="Acknowledgements">
-	<t>Thanks to the following folks for useful comments. These folks
+	<t>Thanks to the following for useful comments. These folks
 	may or may not agree with the content.
 
 	</t>
@@ -285,7 +285,7 @@ This document does not require actions by IANA. </t>
  
 	Jari Arkko,
 	Bernard Aboba,
-	Benoit Claise
+	Benoit Claise,
 	Nick Doty,
 	Spencer Dawkins,
 	Eliot Lear,
