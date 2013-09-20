@@ -105,7 +105,7 @@ communications, and that as such it should be encouraged and available to all.
 security. <xref target="RFC3552" /> provides guidance about how to consider
 security in protocol design and how to document security choices. In <xref
 target="RFC2804" />, the IETF established a policy of not considering
-wiretapping requirements in IETF protocols. 
+wiretapping requirements in IETF standards-track protocols. 
 <xref target="RFC6973" /> explains the many different aspects of
 privacy that can be affected by Internet protocol design and provides guidance
 to help designers consider privacy in their work. 
@@ -296,6 +296,7 @@ This document does not require actions by IANA. </t>
 	Spencer Dawkins,
 	Eliot Lear,
 	Ted Lemon,
+	SM,
 	</t>
     </section>
 
