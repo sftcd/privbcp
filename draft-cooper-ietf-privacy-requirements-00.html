@@ -254,15 +254,10 @@ Terminology</h3>
 in this document are to be interpreted as described in <a class='info' href='#RFC2119'>[RFC2119]<span> (</span><span class='info'>Bradner, S., &ldquo;Key words for use in RFCs to Indicate Requirement Levels,&rdquo; March&nbsp;1997.</span><span>)</span></a>.  These words take their normative meanings only when they are presented in
 ALL UPPERCASE.
 </p>
-<p>Encryption cannot provide privacy but can provide confidentiality
-and protocols that support confidentiality can use this property to provide better
-privacy; therefore, it is important that encryption is
-used.
-</p>
 <p>"Opportunistic encryption" is defined as encryption without any pre-arrangement
 specific to the pair of systems involved (see <a class='info' href='#RFC4322'>[RFC4322]<span> (</span><span class='info'>Richardson, M. and D. Redelmeier, &ldquo;Opportunistic Encryption using the Internet Key Exchange (IKE),&rdquo; December&nbsp;2005.</span><span>)</span></a>).
 </p>
-<p>Privacy-specific terminology is provided in <a class='info' href='#RFC6973'>[RFC6973]<span> (</span><span class='info'>Cooper, A., Tschofenig, H., Aboba, B., Peterson, J., Morris, J., Hansen, M., and R. Smith, &ldquo;Privacy Considerations for Internet Protocols,&rdquo; July&nbsp;2013.</span><span>)</span></a>. Of particular relevance to this document is the term "personal data," defined as "any information relating to an individual who can be identified, directly or indirectly."
+<p>Privacy-specific terminology is provided in <a class='info' href='#RFC6973'>[RFC6973]<span> (</span><span class='info'>Cooper, A., Tschofenig, H., Aboba, B., Peterson, J., Morris, J., Hansen, M., and R. Smith, &ldquo;Privacy Considerations for Internet Protocols,&rdquo; July&nbsp;2013.</span><span>)</span></a>. Of particular relevance to this document is the term "personal data," defined as "any information relating to an individual who can be identified, directly or indirectly." Identifiers such as IP addresses that can remain consistent over time or that particular parties associate with directly identifiable information (such as a real name or street address) are therefore considered to be personal data.
 </p>
 <a name="core"></a><br /><hr />
 <table summary="layout" cellpadding="0" cellspacing="2" class="TOCbug" align="right"><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></table>
@@ -272,10 +267,10 @@ Recommendations</h3>
 <p>
 There are inherent privacy risks with protocols that allow the communicating
 parties to store personal data, transport personal data, or are vulnerable to
-other parties seeing the personal data in the exchanged communications. Most
-Internet communications involve such risks, and this can allow entities to build large
+other parties observing the personal data in the exchanged communications. Most
+Internet communications involve such risks, which can allow entities to build large
 databases of information that by themselves or in conjunction with other
-databases, can identify people and their actions in invasive ways.  
+databases can identify people and their actions in invasive ways.  
 
 </p>
 <p>Therefore, to the extent consistent with basic protocol operation and
@@ -302,7 +297,7 @@ large-scale privacy attacks, some protection is needed also for other
 situations.  As a consequence, at minimum, opportunistic encryption needs to be
 well-defined for almost all new IETF standards track protocols.  In most cases
 it will be better to (also) specify how to do mutually authenticated
-encryption. 
+encryption. Encryption provides one aspect of privacy protection, namely confidentiality.
 </p>
 <p>Note that this is contingent on practicality - if
 some personal data really has to be
@@ -357,11 +352,20 @@ security protocol can meet the requirements of this
 BCP.
 
 </p>
+<p>For some protocols, minimizing the use of personal data involves limiting the lifetime of identifiers. In cases where an identifier
+   refers to an individual (or a proxy for an individual, such as a host
+   device or software instance), the longer that identifier persists and
+   the more contexts in which it is used, the more it can facilitate
+   correlation and tracking of information related to the individual and
+   his or her activities.  Creating identifiers that have limited lifetimes by default reduces the possibility that multiple protocol
+   interactions or communications can be correlated back to the same
+   individual. <a class='info' href='#RFC4941'>[RFC4941]<span> (</span><span class='info'>Narten, T., Draves, R., and S. Krishnan, &ldquo;Privacy Extensions for Stateless Address Autoconfiguration in IPv6,&rdquo; September&nbsp;2007.</span><span>)</span></a> provides an example in the case of stateless autoconfiguration of IPv6 interface identifiers.
+</p>
 <p>
 
 Since the goal here is to have a BCP that covers all IETF standards track
 protocols we  clearly cannot address all aspects of privacy, for example user
-consent, since that would only be relevant for a small proportion
+participation, since that would only be relevant for a small proportion
 of IETF protocols. 
 
 
@@ -381,7 +385,7 @@ here for being liberal in what you accept.
 Security Considerations</h3>
 
 <p>This document articulates a set of Best Current Practices for privacy that
-extend the IETF's existing security principles. [Fill in some text about
+extend the IETF's existing security principles. [To do: Fill in some text about
 potential tension between privacy and security, e.g., with non-persistent
 identifiers, etc.]
 </p>
@@ -430,6 +434,8 @@ Acknowledgements</h3>
 <td class="author-text">Rescorla, E. and B. Korver, &ldquo;<a href="http://tools.ietf.org/html/rfc3552">Guidelines for Writing RFC Text on Security Considerations</a>,&rdquo; BCP&nbsp;72, RFC&nbsp;3552, July&nbsp;2003 (<a href="http://www.rfc-editor.org/rfc/rfc3552.txt">TXT</a>).</td></tr>
 <tr><td class="author-text" valign="top"><a name="RFC4322">[RFC4322]</a></td>
 <td class="author-text">Richardson, M. and D. Redelmeier, &ldquo;<a href="http://tools.ietf.org/html/rfc4322">Opportunistic Encryption using the Internet Key Exchange (IKE)</a>,&rdquo; RFC&nbsp;4322, December&nbsp;2005 (<a href="http://www.rfc-editor.org/rfc/rfc4322.txt">TXT</a>).</td></tr>
+<tr><td class="author-text" valign="top"><a name="RFC4941">[RFC4941]</a></td>
+<td class="author-text">Narten, T., Draves, R., and S. Krishnan, &ldquo;<a href="http://tools.ietf.org/html/rfc4941">Privacy Extensions for Stateless Address Autoconfiguration in IPv6</a>,&rdquo; RFC&nbsp;4941, September&nbsp;2007 (<a href="http://www.rfc-editor.org/rfc/rfc4941.txt">TXT</a>).</td></tr>
 <tr><td class="author-text" valign="top"><a name="RFC6973">[RFC6973]</a></td>
 <td class="author-text">Cooper, A., Tschofenig, H., Aboba, B., Peterson, J., Morris, J., Hansen, M., and R. Smith, &ldquo;<a href="http://tools.ietf.org/html/rfc6973">Privacy Considerations for Internet Protocols</a>,&rdquo; RFC&nbsp;6973, July&nbsp;2013 (<a href="http://www.rfc-editor.org/rfc/rfc6973.txt">TXT</a>).</td></tr>
 </table>
