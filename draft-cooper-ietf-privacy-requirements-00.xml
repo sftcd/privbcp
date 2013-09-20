@@ -114,7 +114,7 @@ design.</t>
 
 <t>
 
-   These principles should be applied when designing new protocols,
+   These principles, old and new, should be applied when designing new protocols,
    and where applicable, should be considered for updates of existing
    protocols.
 </t>
@@ -163,10 +163,10 @@ personal data:</t>
 
 <t><list style="numbers">
 
-<t>MUST minimize their use of such information</t> 
+<t>MUST minimize their use of such personal data, and, </t> 
 
 <t>
-where personal  information is sent,
+where personal data is sent,
 MUST have well-defined and interoperable ways to send such data encrypted
 for the intended recipient(s).</t>
 
@@ -199,7 +199,8 @@ above MUST include (or reference) an explanation of why they do not conform to t
 
 <section anchor="eg" title="Examples and Explanation">
 
-<t>This section has some examples and explanatory material. [[More 
+<t>This section has some examples and explanatory material. [[More,
+including references,  
 will be added as discussion evolves.]]
 </t>
 
@@ -220,7 +221,8 @@ conformance with this BCP. For example, claiming that
 Diameter conformed to this BCP becuase one could in
 principle run Diameter over IPsec would not be credible,
 as it seems that such deployments are rare to non-existent.
-Just as practicality is important when claiming that
+In the same way that being being realistic is important when
+we consider a claim that
 sending personal data is unavoidable, it is just as
 important when claiming that layering on top of a 
 security protocol can meet the requirements of this
@@ -231,10 +233,19 @@ BCP.
 
 Since the goal here is to have a BCP that covers all IETF standards track
 protocols we  clearly cannot address all aspects of privacy, for example user
-consent. 
+consent, since that would only be relevant for a small proportion
+of IETF protocols. 
 
 </t>
 
+<t>
+One could consider mininimising the personal data sent by
+IETF protocols as a form being conservative in what you
+send, one of the longest standing principles in IETF
+protocol design. There doesn't seem to be an equivalent
+here for being liberal in what you accept.
+
+</t>
 
 
 </section>

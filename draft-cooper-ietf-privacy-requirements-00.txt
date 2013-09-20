@@ -132,9 +132,9 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    Practices for avoiding egregious privacy violations and establishing
    support for privacy as a principle of IETF protocol design.
 
-   These principles should be applied when designing new protocols, and
-   where applicable, should be considered for updates of existing
-   protocols.
+   These principles, old and new, should be applied when designing new
+   protocols, and where applicable, should be considered for updates of
+   existing protocols.
 
    Discussion of this draft is directed to the ietf-privacy@ietf.org
    list.
@@ -239,9 +239,9 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    management, standards-track IETF protocols that involve transmission
    of personal data:
 
-   1.  MUST minimize their use of such information
+   1.  MUST minimize their use of such personal data, and,
 
-   2.  where personal information is sent, MUST have well-defined and
+   2.  where personal data is sent, MUST have well-defined and
        interoperable ways to send such data encrypted for the intended
        recipient(s).
 
@@ -283,8 +283,8 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
 
 4.  Examples and Explanation
 
-   This section has some examples and explanatory material.  [[More will
-   be added as discussion evolves.]]
+   This section has some examples and explanatory material.  [[More,
+   including references, will be added as discussion evolves.]]
 
    DHCP is an example of a protocol where it seems quite hard to provide
    useful confidentiality.  Should a new DHCP option be defined that
@@ -297,21 +297,21 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    that that is sufficient to claim conformance with this BCP.  For
    example, claiming that Diameter conformed to this BCP becuase one
    could in principle run Diameter over IPsec would not be credible, as
-   it seems that such deployments are rare to non-existent.  Just as
-   practicality is important when claiming that sending personal data is
-   unavoidable, it is just as important when claiming that layering on
-   top of a security protocol can meet the requirements of this BCP.
+   it seems that such deployments are rare to non-existent.  In the same
+   way that being being realistic is important when we consider a claim
+   that sending personal data is unavoidable, it is just as important
+   when claiming that layering on top of a security protocol can meet
+   the requirements of this BCP.
 
    Since the goal here is to have a BCP that covers all IETF standards
    track protocols we clearly cannot address all aspects of privacy, for
-   example user consent.
+   example user consent, since that would only be relevant for a small
+   proportion of IETF protocols.
 
-
-
-
-
-
-
+   One could consider mininimising the personal data sent by IETF
+   protocols as a form being conservative in what you send, one of the
+   longest standing principles in IETF protocol design.  There doesn't
+   seem to be an equivalent here for being liberal in what you accept.
 
 
 
