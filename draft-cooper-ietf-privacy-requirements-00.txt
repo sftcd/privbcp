@@ -178,9 +178,9 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    are presented in ALL UPPERCASE.
 
    Encryption cannot provide privacy but can provide confidentiality and
-   protocols that support confidentiality can usefully use that in order
-   to provide better privacy.  So it is important that encryption is
-   seen as a useful mechanism and not as "providing privacy."
+   protocols that support confidentiality can use this property to
+   provide better privacy; therefore, it is important that encryption is
+   used.
 
    "Opportunistic encryption" is defined as encryption without any pre-
    arrangement specific to the pair of systems involved (see [RFC4322]).
