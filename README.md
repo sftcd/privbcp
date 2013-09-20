@@ -1,2 +1,3 @@
+#Purpose
 
-This is where we're working on this text
+This draft is all about making protocol designers take privacy issues seriously when doing protocol design.
