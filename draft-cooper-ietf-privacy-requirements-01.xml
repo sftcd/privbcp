@@ -108,18 +108,14 @@ target="RFC2804" />, the IETF established a policy of not considering
 wiretapping requirements in IETF standards-track protocols. 
 <xref target="RFC6973" /> explains the many different aspects of
 privacy that can be affected by Internet protocol design and provides guidance
-to help designers consider privacy in their work. 
-This document extends the existing body of IETF principles concerning
-security by articulating Best Current Practices for avoiding egregious privacy
+to help designers consider privacy in their work.</t>
+
+<t>This document extends the existing body of IETF principles concerning
+security by articulating Best Current Practices for avoiding privacy
 violations and establishing support for privacy as a principle of IETF protocol
-design.</t> 
-
-<t>
-
-   These principles, old and new, should be applied when designing new protocols,
+design. These principles, old and new, should be applied when designing new protocols,
    and where applicable, should be considered for updates of existing
-   protocols.
-</t>
+   protocols. It is the consensus of the IETF that pervasive surveillance is an attack on privacy that should be defended against through protocol design.</t> 
 
 <t>Discussion of this draft is directed to the ietf-privacy@ietf.org list.</t>
 
@@ -160,7 +156,7 @@ personal data:</t>
 
 <t><list style="numbers">
 
-<t>MUST minimize their use of such personal data, and, </t> 
+<t>MUST minimize their use of such personal data, and</t> 
 
 <t>
 where personal data is sent,
@@ -175,8 +171,7 @@ While existing principles call for strong security, it is important to note
 that strong security only in cases where the other party can be authenticated
 does not by itself solve all privacy problems. To guard against dangers of
 large-scale privacy attacks, some protection is needed also for other
-situations.  As a consequence, at minimum, opportunistic encryption needs to be
-well-defined for almost all new IETF standards track protocols.  In most cases
+situations.  As a consequence, at minimum, opportunistic encryption needs to be well-defined for new IETF standards track protocols. This requirement may be waived only in exceptional circumstances where the protocol's utility would be eliminated or severely diminished if opportunistic encryption were defined.   In most cases
 it will be better to (also) specify how to do mutually authenticated
 encryption. Encryption provides one aspect of privacy protection, namely confidentiality.</t>
 
@@ -267,9 +262,9 @@ here for being liberal in what you accept.
     <section anchor="SecurityConsiderations" title="Security Considerations">
 
 <t>This document articulates a set of Best Current Practices for privacy that
-extend the IETF's existing security principles. [To do: Fill in some text about
-potential tension between privacy and security, e.g., with non-persistent
-identifiers, etc.]</t>
+extend the IETF's existing security principles. At times, privacy and security may appear to be in tension. For example, adherence to the recommendation in this BCP to minimize the use of personal data will likely yield less use of persistent identifiers associated with individual users. Reducing the use of persistent identifiers can help attackers shield their identities and activities just as it can for legitimate users. However, even relatively unsophisticated attackers already have at their disposal a variety of tools for cloaking their identities. Recommending the minimization of personal data use at the protocol level can benefit the vast majority of legitimate users who depend on IETF protocols without materially improving attackers' existing tools for guarding their identities.</t>
+
+<t>Similarly, malware and other attack traffic can generally already be transmitted using object encryption or protocol encryption if attackers so choose. Recommending that IETF protocols define mechanisms for opportunistic encryption can increase the availability of confidentiality protection to legitimate users without significantly changing the set of tools that attackers already use to shield their traffic from being identified and their attacks from being thwarted.</t>
 
 </section>
 
@@ -297,6 +292,8 @@ This document does not require actions by IANA. </t>
 	Eliot Lear,
 	Ted Lemon,
 	SM,
+	Avri Doria,
+	Brian Trammell,
 	</t>
     </section>
 
