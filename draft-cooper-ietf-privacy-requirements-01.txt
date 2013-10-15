@@ -1,13 +1,14 @@
 
 
 
+
 Network Working Group                                          A. Cooper
 Internet-Draft                                                       CDT
-Intended status: BCP                                          S. Farrell
-Expires: March 24, 2014                           Trinity College Dublin
+Intended status: Best Current Practice                        S. Farrell
+Expires: April 18, 2014                           Trinity College Dublin
                                                                S. Turner
                                                               IECA, Inc.
-                                                      September 20, 2013
+                                                        October 15, 2013
 
 
                 Privacy Requirements for IETF Protocols
@@ -20,7 +21,7 @@ Abstract
    establishes a number of protocol design choices as Best Current
    Practices for the purpose of avoiding such violations.
 
-Status of this Memo
+Status of This Memo
 
    This Internet-Draft is submitted in full conformance with the
    provisions of BCP 78 and BCP 79.
@@ -35,7 +36,7 @@ Status of this Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on March 24, 2014.
+   This Internet-Draft will expire on April 18, 2014.
 
 Copyright Notice
 
@@ -52,66 +53,25 @@ Copyright Notice
 
 
 
-Cooper, et al.           Expires March 24, 2014                 [Page 1]
+Cooper, et al.           Expires April 18, 2014                 [Page 1]
 
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
+Internet-Draft   Privacy Requirements for IETF Protocols    October 2013
 
 
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-
 Table of Contents
 
-   1.  Introduction . . . . . . . . . . . . . . . . . . . . . . . . .  3
-   2.  Terminology  . . . . . . . . . . . . . . . . . . . . . . . . .  4
-   3.  Recommendations  . . . . . . . . . . . . . . . . . . . . . . .  5
-   4.  Examples and Explanation . . . . . . . . . . . . . . . . . . .  6
-   5.  Security Considerations  . . . . . . . . . . . . . . . . . . .  7
-   6.  IANA Considerations  . . . . . . . . . . . . . . . . . . . . .  8
-   7.  Acknowledgements . . . . . . . . . . . . . . . . . . . . . . .  9
-   8.  Informative References . . . . . . . . . . . . . . . . . . . . 10
-   Authors' Addresses . . . . . . . . . . . . . . . . . . . . . . . . 11
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 2]
-
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
-
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Recommendations . . . . . . . . . . . . . . . . . . . . . . .   3
+   4.  Examples and Explanation  . . . . . . . . . . . . . . . . . .   4
+   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
+   7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
+   8.  Informative References  . . . . . . . . . . . . . . . . . . .   6
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -127,15 +87,16 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    wiretapping requirements in IETF standards-track protocols.
    [RFC6973] explains the many different aspects of privacy that can be
    affected by Internet protocol design and provides guidance to help
-   designers consider privacy in their work.  This document extends the
-   existing body of IETF principles concerning security by articulating
-   Best Current Practices for avoiding egregious privacy violations and
-   establishing support for privacy as a principle of IETF protocol
-   design.
+   designers consider privacy in their work.
 
-   These principles, old and new, should be applied when designing new
-   protocols, and where applicable, should be considered for updates of
-   existing protocols.
+   This document extends the existing body of IETF principles concerning
+   security by articulating Best Current Practices for avoiding privacy
+   violations and establishing support for privacy as a principle of
+   IETF protocol design.  These principles, old and new, should be
+   applied when designing new protocols, and where applicable, should be
+   considered for updates of existing protocols.  It is the consensus of
+   the IETF that pervasive surveillance is an attack on privacy that
+   should be defended against through protocol design.
 
    Discussion of this draft is directed to the ietf-privacy@ietf.org
    list.
@@ -148,25 +109,9 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 3]
+Cooper, et al.           Expires April 18, 2014                 [Page 2]
 
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
+Internet-Draft   Privacy Requirements for IETF Protocols    October 2013
 
 
 2.  Terminology
@@ -188,43 +133,6 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    directly identifiable information (such as a real name or street
    address) are therefore considered to be personal data.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 4]
-
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
-
-
 3.  Recommendations
 
    There are inherent privacy risks with protocols that allow the
@@ -239,7 +147,7 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    management, standards-track IETF protocols that involve transmission
    of personal data:
 
-   1.  MUST minimize their use of such personal data, and,
+   1.  MUST minimize their use of such personal data, and
 
    2.  where personal data is sent, MUST have well-defined and
        interoperable ways to send such data encrypted for the intended
@@ -250,11 +158,21 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    be authenticated does not by itself solve all privacy problems.  To
    guard against dangers of large-scale privacy attacks, some protection
    is needed also for other situations.  As a consequence, at minimum,
-   opportunistic encryption needs to be well-defined for almost all new
-   IETF standards track protocols.  In most cases it will be better to
-   (also) specify how to do mutually authenticated encryption.
-   Encryption provides one aspect of privacy protection, namely
-   confidentiality.
+   opportunistic encryption needs to be well-defined for new IETF
+   standards track protocols.  This requirement may be waived only in
+   exceptional circumstances where the protocol's utility would be
+   eliminated or severely diminished if opportunistic encryption were
+
+
+
+Cooper, et al.           Expires April 18, 2014                 [Page 3]
+
+Internet-Draft   Privacy Requirements for IETF Protocols    October 2013
+
+
+   defined.  In most cases it will be better to (also) specify how to do
+   mutually authenticated encryption.  Encryption provides one aspect of
+   privacy protection, namely confidentiality.
 
    Note that this is contingent on practicality - if some personal data
    really has to be sent in clear for a protocol to be able to operate,
@@ -269,17 +187,6 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
 
    Specifications that do not meet the criteria above MUST include (or
    reference) an explanation of why they do not conform to this BCP.
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 5]
-
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
-
 
 4.  Examples and Explanation
 
@@ -311,6 +218,14 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    correlation and tracking of information related to the individual and
    his or her activities.  Creating identifiers that have limited
    lifetimes by default reduces the possibility that multiple protocol
+
+
+
+Cooper, et al.           Expires April 18, 2014                 [Page 4]
+
+Internet-Draft   Privacy Requirements for IETF Protocols    October 2013
+
+
    interactions or communications can be correlated back to the same
    individual.  [RFC4941] provides an example in the case of stateless
    autoconfiguration of IPv6 interface identifiers.
@@ -325,185 +240,50 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    longest standing principles in IETF protocol design.  There doesn't
    seem to be an equivalent here for being liberal in what you accept.
 
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 6]
-
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
-
-
 5.  Security Considerations
 
    This document articulates a set of Best Current Practices for privacy
-   that extend the IETF's existing security principles.  [To do: Fill in
-   some text about potential tension between privacy and security, e.g.,
-   with non-persistent identifiers, etc.]
+   that extend the IETF's existing security principles.  At times,
+   privacy and security may appear to be in tension.  For example,
+   adherence to the recommendation in this BCP to minimize the use of
+   personal data will likely yield less use of persistent identifiers
+   associated with individual users.  Reducing the use of persistent
+   identifiers can help attackers shield their identities and activities
+   just as it can for legitimate users.  However, even relatively
+   unsophisticated attackers already have at their disposal a variety of
+   tools for cloaking their identities.  Recommending the minimization
+   of personal data use at the protocol level can benefit the vast
+   majority of legitimate users who depend on IETF protocols without
+   materially improving attackers' existing tools for guarding their
+   identities.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 7]
-
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
-
+   Similarly, malware and other attack traffic can generally already be
+   transmitted using object encryption or protocol encryption if
+   attackers so choose.  Recommending that IETF protocols define
+   mechanisms for opportunistic encryption can increase the availability
+   of confidentiality protection to legitimate users without
+   significantly changing the set of tools that attackers already use to
+   shield their traffic from being identified and their attacks from
+   being thwarted.
 
 6.  IANA Considerations
 
    This document does not require actions by IANA.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 8]
-
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
-
 
 7.  Acknowledgements
 
    Thanks to the following for useful comments.  These folks may or may
    not agree with the content.
 
-   Jari Arkko, Bernard Aboba, Benoit Claise, Nick Doty, Spencer Dawkins,
-   Eliot Lear, Ted Lemon, SM,
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                 [Page 9]
+Cooper, et al.           Expires April 18, 2014                 [Page 5]
 
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
+Internet-Draft   Privacy Requirements for IETF Protocols    October 2013
 
+
+   Jari Arkko, Bernard Aboba, Benoit Claise, Nick Doty, Spencer Dawkins,
+   Eliot Lear, Ted Lemon, SM, Avri Doria, Brian Trammell,
 
 8.  Informative References
 
@@ -514,20 +294,20 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997.
 
-   [RFC2804]  IAB and IESG, "IETF Policy on Wiretapping", RFC 2804,
-              May 2000.
+   [RFC2804]  IAB IESG, "IETF Policy on Wiretapping", RFC 2804, May
+              2000.
 
    [RFC3365]  Schiller, J., "Strong Security Requirements for Internet
-              Engineering Task Force Standard Protocols", BCP 61,
-              RFC 3365, August 2002.
+              Engineering Task Force Standard Protocols", BCP 61, RFC
+              3365, August 2002.
 
    [RFC3552]  Rescorla, E. and B. Korver, "Guidelines for Writing RFC
-              Text on Security Considerations", BCP 72, RFC 3552,
-              July 2003.
+              Text on Security Considerations", BCP 72, RFC 3552, July
+              2003.
 
    [RFC4322]  Richardson, M. and D. Redelmeier, "Opportunistic
-              Encryption using the Internet Key Exchange (IKE)",
-              RFC 4322, December 2005.
+              Encryption using the Internet Key Exchange (IKE)", RFC
+              4322, December 2005.
 
    [RFC4941]  Narten, T., Draves, R., and S. Krishnan, "Privacy
               Extensions for Stateless Address Autoconfiguration in
@@ -535,31 +315,8 @@ Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
 
    [RFC6973]  Cooper, A., Tschofenig, H., Aboba, B., Peterson, J.,
               Morris, J., Hansen, M., and R. Smith, "Privacy
-              Considerations for Internet Protocols", RFC 6973,
-              July 2013.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Cooper, et al.           Expires March 24, 2014                [Page 10]
-
-Internet-Draft   Privacy Requirements for IETF Protocols  September 2013
-
+              Considerations for Internet Protocols", RFC 6973, July
+              2013.
 
 Authors' Addresses
 
@@ -574,9 +331,16 @@ Authors' Addresses
    URI:   http://www.cdt.org/
 
 
+
+
+Cooper, et al.           Expires April 18, 2014                 [Page 6]
+
+Internet-Draft   Privacy Requirements for IETF Protocols    October 2013
+
+
    Stephen Farrell
    Trinity College Dublin
-   Dublin,   2
+   Dublin  2
    Ireland
 
    Phone: +353-1-896-2354
@@ -612,5 +376,17 @@ Authors' Addresses
 
 
 
-Cooper, et al.           Expires March 24, 2014                [Page 11]
-
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cooper, et al.           Expires April 18, 2014                 [Page 7]
