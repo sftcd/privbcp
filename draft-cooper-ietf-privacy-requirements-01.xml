@@ -115,7 +115,9 @@ security by articulating Best Current Practices for avoiding privacy
 violations and establishing support for privacy as a principle of IETF protocol
 design. These principles, old and new, should be applied when designing new protocols,
    and where applicable, should be considered for updates of existing
-   protocols. It is the consensus of the IETF that pervasive surveillance is an attack on privacy that should be defended against through protocol design.</t> 
+   protocols.</t> 
+   
+   <t></t>It is the consensus of the IETF that pervasive surveillance is an attack on privacy that should be defended against through protocol design.</t> 
 
 <t>Discussion of this draft is directed to the ietf-privacy@ietf.org list.</t>
 
@@ -131,7 +133,7 @@ in this document are to be interpreted as described in <xref target="RFC2119"
 ALL UPPERCASE.</t>
 
 <t>"Opportunistic encryption" is defined as encryption without any pre-arrangement
-specific to the pair of systems involved (see <xref target="RFC4322" />).</t>
+specific to the pair of systems involved (e.g., by using a Diffie-Hellman exchange). See <xref target="RFC4322" />.</t>
 
 <t>Privacy-specific terminology is provided in <xref target="RFC6973" />. Of particular relevance to this document is the term "personal data," defined as "any information relating to an individual who can be identified, directly or indirectly." Identifiers such as IP addresses that can remain consistent over time or that particular parties associate with directly identifiable information (such as a real name or street address) are therefore considered to be personal data.</t>
 
