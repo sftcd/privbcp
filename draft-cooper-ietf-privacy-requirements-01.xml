@@ -83,7 +83,7 @@
 
 <abstract>
     
-<t>It is the consensus of the IETF that IETF protocols be designed to avoid
+<t>It is the consensus of the IETF that our protocols be designed to avoid
 privacy violations to the extent possible. This document establishes
 a number of protocol design choices as Best Current Practices for the purpose
 of avoiding such violations.</t>
@@ -117,7 +117,7 @@ design. These principles, old and new, should be applied when designing new prot
    and where applicable, should be considered for updates of existing
    protocols.</t> 
    
-   <t></t>It is the consensus of the IETF that pervasive surveillance is an attack on privacy that should be defended against through protocol design.</t> 
+   <t>It is also the consensus of the IETF that pervasive surveillance is an attack on privacy that should be defended against through protocol design.</t> 
 
 <t>Discussion of this draft is directed to the ietf-privacy@ietf.org list.</t>
 
@@ -173,9 +173,30 @@ While existing principles call for strong security, it is important to note
 that strong security only in cases where the other party can be authenticated
 does not by itself solve all privacy problems. To guard against dangers of
 large-scale privacy attacks, some protection is needed also for other
-situations.  As a consequence, at minimum, opportunistic encryption needs to be well-defined for new IETF standards track protocols. This requirement may be waived only in exceptional circumstances where the protocol's utility would be eliminated or severely diminished if opportunistic encryption were defined.   In most cases
-it will be better to (also) specify how to do mutually authenticated
-encryption. Encryption provides one aspect of privacy protection, namely confidentiality.</t>
+situations.  
+
+</t>
+
+<t>
+
+As a consequence, at minimum, opportunistic encryption MUST be 
+well-defined for new IETF standards track protocols. This requirement 
+can be waived only in exceptional circumstances where the protocol's 
+utility would be eliminated or severely diminished if opportunistic 
+encryption were defined.   
+Note that encryption provides one aspect of privacy protection, 
+namely confidentiality.
+In most cases
+it will be better to (also) specify how to do one-sided (e.g.
+TLS server authenticaiton as commonly used in the web) or 
+mutually authenticated
+encryption. 
+Where both opportunistic and one-sided or mutually authenticated
+encryption are specified, protocols MUST also protect against downgrade
+attacks so that scenarios where authentication is required cannot
+easily be manipulated into using opportunistic encryption which 
+will often be subject to man-in-the-middle attacks. 
+</t>
 
 <t>Note that this is contingent on practicality - if
 some personal data really has to be
@@ -288,6 +309,7 @@ This document does not require actions by IANA. </t>
  
 	Jari Arkko,
 	Bernard Aboba,
+	Scott Brim,
 	Benoit Claise,
 	Nick Doty,
 	Spencer Dawkins,
@@ -296,6 +318,7 @@ This document does not require actions by IANA. </t>
 	SM,
 	Avri Doria,
 	Brian Trammell,
+	Robin Wilton,
 	</t>
     </section>
 
