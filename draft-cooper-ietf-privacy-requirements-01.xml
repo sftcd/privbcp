@@ -187,8 +187,7 @@ encryption were defined.
 Note that encryption provides one aspect of privacy protection, 
 namely confidentiality.
 In most cases
-it will be better to (also) specify how to do one-sided (e.g.
-TLS server authenticaiton as commonly used in the web) or 
+it will be better to (also) specify how to do one-sided (e.g., TLS server authentication as commonly used in the web) or 
 mutually authenticated
 encryption. 
 Where both opportunistic and one-sided or mutually authenticated
@@ -198,7 +197,7 @@ easily be manipulated into using opportunistic encryption which
 will often be subject to man-in-the-middle attacks. 
 </t>
 
-<t>Note that this is contingent on practicality - if
+<t>Note that these encryption requirements are contingent on practicality - if
 some personal data really has to be
 sent in clear for a protocol to be able to operate, and
 even opportunistic encryption is not possible, then a
